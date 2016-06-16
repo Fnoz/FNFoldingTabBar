@@ -1,5 +1,5 @@
-# FNAnimalLoginView
-Swift登陆界面：猫头鹰蒙眼、企鹅闭眼、相片毛玻璃.
+# FNFoldingTabBar
+Swift实现的Yalantis的FoldingTabBar.iOS.
 
 ###基础使用Demo：
 
