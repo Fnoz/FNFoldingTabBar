@@ -67,6 +67,14 @@ public class FNFoldingTabBar: UIView{
                         button?.center = CGPointMake(self.frame.size.width * 3 / 4 - 20 + (self.frame.size.width / 2 - 40)/2 * CGFloat(i-2), 40)
                     }
                 })
+                
+                UIView.animateWithDuration(0.25, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseOut, animations: {
+                    button?.transform = CGAffineTransformMakeRotation(0.5 * CGFloat(M_PI))
+                    }, completion: nil)
+                
+                UIView.animateWithDuration(0.5, delay: 0.25, usingSpringWithDamping: 0.1, initialSpringVelocity: 4.0, options: .CurveEaseOut, animations: {
+                    button?.transform = CGAffineTransformMakeRotation(0 * CGFloat(M_PI))
+                    }, completion: nil)
             }
             else {
                 UIView.animateWithDuration(0.5, animations: {
