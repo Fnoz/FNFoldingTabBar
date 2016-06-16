@@ -15,7 +15,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        self.window!.backgroundColor = UIColor.whiteColor()
+        self.window!.makeKeyAndVisible()
+        let tabController:FNFoldingTabBarController = FNFoldingTabBarController.init();
+        tabController.title = "FNFoldingTabBar"
+        
+        let vc0 = ViewController0.init()
+        vc0.tabBarItem.title = "0";
+        vc0.tabBarItem.image = nil
+        
+        let vc1 = ViewController1.init()
+        vc1.tabBarItem.title = "1";
+        vc1.tabBarItem.image = nil
+        
+        let vc2 = ViewController2.init()
+        vc2.tabBarItem.title = "2";
+        vc2.tabBarItem.image = nil
+        
+        let vc3 = ViewController3.init()
+        vc3.tabBarItem.title = "3";
+        vc3.tabBarItem.image = nil
+        
+        tabController.fn_viewControllers=[vc0, vc1, vc2, vc3]
+        
+        let naviController = UINavigationController.init(rootViewController: tabController)
+        self.window!.rootViewController = naviController
+        self.window!.makeKeyAndVisible()
         return true
     }
 

@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1089EA7C1D1274BA005E6276 /* FNAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1089EA7B1D1274BA005E6276 /* FNAssets.xcassets */; };
 		10D2FD4D1D124C8D001564DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD4C1D124C8D001564DE /* AppDelegate.swift */; };
 		10D2FD4F1D124C8D001564DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD4E1D124C8D001564DE /* ViewController.swift */; };
-		10D2FD521D124C8D001564DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D2FD501D124C8D001564DE /* Main.storyboard */; };
 		10D2FD541D124C8D001564DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D2FD531D124C8D001564DE /* Assets.xcassets */; };
 		10D2FD571D124C8D001564DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D2FD551D124C8D001564DE /* LaunchScreen.storyboard */; };
+		10D2FD601D124CE5001564DE /* FNFoldingTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD5F1D124CE5001564DE /* FNFoldingTabBarController.swift */; };
+		10D2FD631D124DA6001564DE /* ViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD621D124DA6001564DE /* ViewController0.swift */; };
+		10D2FD681D124DD1001564DE /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD671D124DD1001564DE /* ViewController1.swift */; };
+		10D2FD6A1D124DD9001564DE /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD691D124DD9001564DE /* ViewController2.swift */; };
+		10D2FD6C1D124DE1001564DE /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD6B1D124DE1001564DE /* ViewController3.swift */; };
+		10D2FD6E1D1254A5001564DE /* FNFoldingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2FD6D1D1254A5001564DE /* FNFoldingTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1089EA7B1D1274BA005E6276 /* FNAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FNAssets.xcassets; sourceTree = "<group>"; };
 		10D2FD491D124C8D001564DE /* FNFoldingTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FNFoldingTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D2FD4C1D124C8D001564DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10D2FD4E1D124C8D001564DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		10D2FD511D124C8D001564DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10D2FD531D124C8D001564DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10D2FD561D124C8D001564DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10D2FD581D124C8D001564DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10D2FD5F1D124CE5001564DE /* FNFoldingTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNFoldingTabBarController.swift; sourceTree = "<group>"; };
+		10D2FD621D124DA6001564DE /* ViewController0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController0.swift; sourceTree = "<group>"; };
+		10D2FD671D124DD1001564DE /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		10D2FD691D124DD9001564DE /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		10D2FD6B1D124DE1001564DE /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		10D2FD6D1D1254A5001564DE /* FNFoldingTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNFoldingTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,36 @@
 		10D2FD4B1D124C8D001564DE /* FNFoldingTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				10D2FD5E1D124CBC001564DE /* FNFoldingTabBar */,
+				10D2FD611D124D86001564DE /* Controllers */,
 				10D2FD4C1D124C8D001564DE /* AppDelegate.swift */,
 				10D2FD4E1D124C8D001564DE /* ViewController.swift */,
-				10D2FD501D124C8D001564DE /* Main.storyboard */,
 				10D2FD531D124C8D001564DE /* Assets.xcassets */,
 				10D2FD551D124C8D001564DE /* LaunchScreen.storyboard */,
 				10D2FD581D124C8D001564DE /* Info.plist */,
 			);
 			path = FNFoldingTabBar;
+			sourceTree = "<group>";
+		};
+		10D2FD5E1D124CBC001564DE /* FNFoldingTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1089EA7B1D1274BA005E6276 /* FNAssets.xcassets */,
+				10D2FD5F1D124CE5001564DE /* FNFoldingTabBarController.swift */,
+				10D2FD6D1D1254A5001564DE /* FNFoldingTabBar.swift */,
+			);
+			path = FNFoldingTabBar;
+			sourceTree = "<group>";
+		};
+		10D2FD611D124D86001564DE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				10D2FD621D124DA6001564DE /* ViewController0.swift */,
+				10D2FD671D124DD1001564DE /* ViewController1.swift */,
+				10D2FD691D124DD9001564DE /* ViewController2.swift */,
+				10D2FD6B1D124DE1001564DE /* ViewController3.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +156,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1089EA7C1D1274BA005E6276 /* FNAssets.xcassets in Resources */,
 				10D2FD571D124C8D001564DE /* LaunchScreen.storyboard in Resources */,
 				10D2FD541D124C8D001564DE /* Assets.xcassets in Resources */,
-				10D2FD521D124C8D001564DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,21 +170,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				10D2FD4F1D124C8D001564DE /* ViewController.swift in Sources */,
+				10D2FD681D124DD1001564DE /* ViewController1.swift in Sources */,
+				10D2FD601D124CE5001564DE /* FNFoldingTabBarController.swift in Sources */,
+				10D2FD6E1D1254A5001564DE /* FNFoldingTabBar.swift in Sources */,
 				10D2FD4D1D124C8D001564DE /* AppDelegate.swift in Sources */,
+				10D2FD6C1D124DE1001564DE /* ViewController3.swift in Sources */,
+				10D2FD631D124DA6001564DE /* ViewController0.swift in Sources */,
+				10D2FD6A1D124DD9001564DE /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		10D2FD501D124C8D001564DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10D2FD511D124C8D001564DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		10D2FD551D124C8D001564DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +318,7 @@
 				10D2FD5D1D124C8D001564DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
