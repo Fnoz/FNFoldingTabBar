@@ -71,6 +71,7 @@ public class FNFoldingTabBar: UIView{
                 button.center = addButton.center
                 button.backgroundColor = UIColor.init(red: 63/255.0, green: 212/255.0, blue: 178/255.0, alpha: 1)
                 button.layer.cornerRadius = 30
+                button.adjustsImageWhenHighlighted = false
                 addSubview(button)
                 let vc = _fn_viewControllers[i] as UIViewController
                 if vc.tabBarItem.image != nil {
@@ -162,6 +163,7 @@ public class FNFoldingTabBar: UIView{
         addButton.backgroundColor = UIColor.init(red: 63/255.0, green: 212/255.0, blue: 178/255.0, alpha: 1)
         addButton.layer.cornerRadius = 30
         addButton.addTarget(self, action: #selector(addButtonClicked), forControlEvents: .TouchUpInside)
+        addButton.adjustsImageWhenHighlighted = false
         addButton.setImage(UIImage.init(named: "icon_add"), forState: .Normal)
         addSubview(addButton)
     }

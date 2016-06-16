@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
-        let tabController:FNFoldingTabBarController = FNFoldingTabBarController.init();
+        let tabController:FNFoldingTabBarController = FNFoldingTabBarController.init()
         tabController.title = "FNFoldingTabBar"
         
         let vc0 = ViewController0.init()
