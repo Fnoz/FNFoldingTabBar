@@ -46,13 +46,19 @@ public class FNFoldingTabBar: UIView{
     }
     
     func changeState(expending:Bool) {
-        UIView.animateWithDuration(0.5) {
+        UIView.animateWithDuration(0.5, delay: 0.25, usingSpringWithDamping: 0.3, initialSpringVelocity: 1.0, options: .CurveEaseOut, animations: {
             if expending {
                 self.addButton.transform = CGAffineTransformMakeRotation(0.75 * CGFloat(M_PI))
-                self.smallBgView.frame = CGRectMake(40, 10, self.frame.size.width - 80, 60)
             }
             else {
                 self.addButton.transform = CGAffineTransformMakeRotation(0)
+            }
+            }, completion: nil)
+        UIView.animateWithDuration(0.5) {
+            if expending {
+                self.smallBgView.frame = CGRectMake(40, 10, self.frame.size.width - 80, 60)
+            }
+            else {
                 self.smallBgView.frame = CGRectMake(self.frame.size.width / 2, 10, 0, 60)
             }
         }

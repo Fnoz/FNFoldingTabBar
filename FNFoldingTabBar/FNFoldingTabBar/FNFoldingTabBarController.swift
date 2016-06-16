@@ -37,7 +37,7 @@ class FNFoldingTabBarController: UITabBarController {
         super.viewDidLoad()
         self.tabBar.hidden = true
         
-        foldingTabBar = FNFoldingTabBar.init(frame: CGRectMake(0, view.frame.size.width - 80, view.frame.size.width, 80))
+        foldingTabBar = FNFoldingTabBar.init(frame: CGRectMake(0, view.frame.size.height - 80, view.frame.size.width, 80))
         view.addSubview(foldingTabBar)
     }
     
