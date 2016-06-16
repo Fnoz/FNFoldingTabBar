@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol FNFoldingTabBarDelegate {
+    func tabTappedAtIndex(index: NSInteger)
+}
+
 public class FNFoldingTabBar: UIView{
     var bigBgView:UIView!
     var smallBgView:UIView!
     var addButton:UIButton!
     var isExpend:Bool!
+    var delegate:FNFoldingTabBarDelegate?
     
     var fn_viewControllers:[UIViewController]! {
         get {
@@ -35,6 +40,7 @@ public class FNFoldingTabBar: UIView{
                 else {
                     button.setImage(UIImage.init(named: NSString.init(format: "icon%d", i) as String), forState: .Normal)
                 }
+                button.addTarget(self, action: #selector(tabClicked(_:)), forControlEvents: .TouchUpInside)
                 bringSubviewToFront(addButton)
             }
         }
@@ -43,6 +49,11 @@ public class FNFoldingTabBar: UIView{
     func addButtonClicked() {
         isExpend = !isExpend
         changeState(isExpend)
+    }
+    
+    func tabClicked(button:UIButton) {
+        delegate?.tabTappedAtIndex(button.tag - 100)
+        changeState(false)
     }
     
     func changeState(expending:Bool) {

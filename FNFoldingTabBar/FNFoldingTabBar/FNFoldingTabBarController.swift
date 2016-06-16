@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FNFoldingTabBarController: UITabBarController {
+class FNFoldingTabBarController: UITabBarController, FNFoldingTabBarDelegate {
     var centerImage:UIImage! {
         get {
             return _centerImage
@@ -38,7 +38,12 @@ class FNFoldingTabBarController: UITabBarController {
         self.tabBar.hidden = true
         
         foldingTabBar = FNFoldingTabBar.init(frame: CGRectMake(0, view.frame.size.height - 80, view.frame.size.width, 80))
+        foldingTabBar.delegate = self
         view.addSubview(foldingTabBar)
+    }
+    
+    func tabTappedAtIndex(index: NSInteger) {
+        selectedIndex = index
     }
     
     override func didReceiveMemoryWarning() {
