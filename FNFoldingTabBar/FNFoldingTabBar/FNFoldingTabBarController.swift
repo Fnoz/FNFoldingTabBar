@@ -9,6 +9,8 @@
 import UIKit
 
 class FNFoldingTabBarController: UITabBarController, FNFoldingTabBarDelegate {
+    var foldingTabBar:FNFoldingTabBar!
+
     var centerImage:UIImage! {
         get {
             return _centerImage
@@ -18,9 +20,6 @@ class FNFoldingTabBarController: UITabBarController, FNFoldingTabBarDelegate {
             foldingTabBar.addButton.setImage(newValue, forState: .Normal)
         }
     }
-    
-    private var _centerImage:UIImage!
-    
     var fn_viewControllers:[UIViewController]! {
         get {
             return viewControllers
@@ -31,7 +30,7 @@ class FNFoldingTabBarController: UITabBarController, FNFoldingTabBarDelegate {
         }
     }
     
-    private var foldingTabBar:FNFoldingTabBar!
+    private var _centerImage:UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()

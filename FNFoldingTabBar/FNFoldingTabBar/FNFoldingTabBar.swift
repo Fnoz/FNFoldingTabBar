@@ -13,11 +13,40 @@ protocol FNFoldingTabBarDelegate {
 }
 
 public class FNFoldingTabBar: UIView{
-    var bigBgView:UIView!
-    var smallBgView:UIView!
+    private var bigBgView:UIView!
+    private var smallBgView:UIView!
     var addButton:UIButton!
     var isExpend:Bool!
     var delegate:FNFoldingTabBarDelegate?
+    
+    var _fn_backgroundColor:UIColor?
+    
+    var fn_backgroundColor:UIColor! {
+        get {
+            return _fn_backgroundColor
+        }
+        set {
+            _fn_backgroundColor = newValue
+            bigBgView.backgroundColor = newValue
+        }
+    }
+    
+    var _fn_tintColor:UIColor?
+    
+    var fn_tintColor:UIColor! {
+        get {
+            return _fn_tintColor
+        }
+        set {
+            _fn_tintColor = newValue
+            smallBgView.backgroundColor = newValue
+            addButton.backgroundColor = newValue
+            for i in 0 ... 3 {
+                let button = self.viewWithTag(i + 100)
+                button?.backgroundColor = newValue
+            }
+        }
+    }
     
     var fn_viewControllers:[UIViewController]! {
         get {
@@ -25,7 +54,7 @@ public class FNFoldingTabBar: UIView{
         }
         set {
             _fn_viewControllers = newValue
-            for i in 0 ... 5 {
+            for i in 0 ... 3 {
                 if i >= _fn_viewControllers.count {
                     let button = UIButton.init()
                     button.tag = 100 + i
