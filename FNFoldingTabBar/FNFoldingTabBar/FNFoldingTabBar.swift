@@ -25,7 +25,17 @@ public class FNFoldingTabBar: UIView{
         }
         set {
             _fn_viewControllers = newValue
-            for i in 0 ... _fn_viewControllers.count-1 {
+            for i in 0 ... 5 {
+                if i >= _fn_viewControllers.count {
+                    let button = UIButton.init()
+                    button.tag = 100 + i
+                    button.frame = CGRectMake(0, 0, 60, 60)
+                    button.center = addButton.center
+                    button.backgroundColor = UIColor.init(red: 63/255.0, green: 212/255.0, blue: 178/255.0, alpha: 1)
+                    button.layer.cornerRadius = 30
+                    addSubview(button)
+                    continue
+                }
                 let button = UIButton.init()
                 button.tag = 100 + i
                 button.frame = CGRectMake(0, 0, 60, 60)
@@ -41,8 +51,8 @@ public class FNFoldingTabBar: UIView{
                     button.setImage(UIImage.init(named: NSString.init(format: "icon%d", i) as String), forState: .Normal)
                 }
                 button.addTarget(self, action: #selector(tabClicked(_:)), forControlEvents: .TouchUpInside)
-                bringSubviewToFront(addButton)
             }
+            bringSubviewToFront(addButton)
         }
     }
     
@@ -57,7 +67,7 @@ public class FNFoldingTabBar: UIView{
     }
     
     func changeState(expending:Bool) {
-        UIView.animateWithDuration(0.5, delay: 0.25, usingSpringWithDamping: 0.3, initialSpringVelocity: 1.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 1.0, options: .CurveEaseOut, animations: {
             if expending {
                 self.addButton.transform = CGAffineTransformMakeRotation(0.75 * CGFloat(M_PI))
             }
