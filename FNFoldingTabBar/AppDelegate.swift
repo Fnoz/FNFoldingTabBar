@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible()
         let tabController:FNFoldingTabBarController = FNFoldingTabBarController.init()
         tabController.title = "FNFoldingTabBar"
+        tabController.tabBarBgColor = UIColor.clearColor()
         
         let vc0 = ViewController0.init()
         vc0.tabBarItem.title = "0";

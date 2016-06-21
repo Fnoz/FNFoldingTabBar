@@ -10,6 +10,16 @@ import UIKit
 
 class FNFoldingTabBarController: UITabBarController, FNFoldingTabBarDelegate {
     var foldingTabBar:FNFoldingTabBar!
+    var tabBarBgColor:UIColor! {
+        didSet {
+            foldingTabBar.fn_backgroundColor = tabBarBgColor
+        }
+    }
+    var tabBarTintColor:UIColor! {
+        didSet {
+            foldingTabBar.fn_tintColor = tabBarTintColor
+        }
+    }
 
     var centerImage:UIImage! {
         get {
@@ -37,6 +47,12 @@ class FNFoldingTabBarController: UITabBarController, FNFoldingTabBarDelegate {
         self.tabBar.hidden = true
         
         foldingTabBar = FNFoldingTabBar.init(frame: CGRectMake(0, view.frame.size.height - 80, view.frame.size.width, 80))
+        if tabBarBgColor != nil {
+            foldingTabBar.fn_backgroundColor = tabBarBgColor
+        }
+        if tabBarTintColor != nil {
+            foldingTabBar.fn_tintColor = tabBarTintColor
+        }
         foldingTabBar.delegate = self
         view.addSubview(foldingTabBar)
     }
