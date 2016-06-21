@@ -14,7 +14,7 @@ Swift实现的Yalantis的FoldingTabBar.iOS.
 具体见Demo工程。
 
 ###效果：
-![Animating](readme_images/foldingTabBar.gif)
+![Animating](readme_images/FNFoldingTabBar.gif)
 
 ###来源：
 OC原版是 [Yalantis](https://github.com/Yalantis) 的 [FoldingTabBar.iOS](https://github.com/Yalantis/FoldingTabBar.iOS)
