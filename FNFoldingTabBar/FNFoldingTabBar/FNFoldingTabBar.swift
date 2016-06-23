@@ -92,6 +92,7 @@ public class FNFoldingTabBar: UIView{
     }
     
     func tabClicked(button:UIButton) {
+        isExpend = false
         delegate?.tabTappedAtIndex(button.tag - 100)
         changeState(false)
     }
