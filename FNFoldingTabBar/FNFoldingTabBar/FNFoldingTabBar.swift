@@ -15,9 +15,11 @@ protocol FNFoldingTabBarDelegate {
 public class FNFoldingTabBar: UIView{
     private var bigBgView:UIView!
     private var smallBgView:UIView!
+    private var tabIndicator:UIView!
     var addButton:UIButton!
     var isExpend:Bool!
     var delegate:FNFoldingTabBarDelegate?
+    var currentIndex = 0
     
     var _fn_backgroundColor:UIColor?
     
@@ -82,17 +84,21 @@ public class FNFoldingTabBar: UIView{
                 }
                 button.addTarget(self, action: #selector(tabClicked(_:)), forControlEvents: .TouchUpInside)
             }
+            
             bringSubviewToFront(addButton)
         }
     }
     
     func addButtonClicked() {
+        tabIndicator?.removeFromSuperview()
         isExpend = !isExpend
         changeState(isExpend)
     }
     
     func tabClicked(button:UIButton) {
+        tabIndicator.removeFromSuperview()
         isExpend = false
+        currentIndex = button.tag - 100
         delegate?.tabTappedAtIndex(button.tag - 100)
         changeState(false)
     }
@@ -138,6 +144,20 @@ public class FNFoldingTabBar: UIView{
                 UIView.animateWithDuration(0.5, animations: {
                     button?.center = self.addButton.center
                 })
+            }
+        }
+        if expending {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+                let btn = self.viewWithTag(self.currentIndex + 100)
+                self.tabIndicator = UIView.init(frame: CGRectMake((btn?.center.x)! - 2, 57, 4, 4))
+                self.tabIndicator.layer.cornerRadius = 2
+                self.tabIndicator.backgroundColor = UIColor.init(red: 42/255.0, green: 49/255.0, blue: 67/255.0, alpha: 1)
+                self.addSubview(self.tabIndicator)
+                self.tabIndicator.transform = CGAffineTransformMakeScale(0.1, 0.1)
+                
+                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseOut, animations: {
+                    self.tabIndicator.transform = CGAffineTransformMakeScale(1, 1)
+                    }, completion: nil)
             }
         }
     }
