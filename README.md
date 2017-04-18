@@ -1,7 +1,7 @@
 # FNFoldingTabBar
 Swift实现的Yalantis的FoldingTabBar.iOS.
 
-###基础使用Demo：
+### 基础使用Demo：
 
 ```
 	let tabController:FNFoldingTabBarController = FNFoldingTabBarController.init()
@@ -13,8 +13,8 @@ Swift实现的Yalantis的FoldingTabBar.iOS.
 ```
 具体见Demo工程。
 
-###效果：
+### 效果：
 ![Animating](readme_images/FNFoldingTabBar.gif)
 
-###来源：
+### 来源：
 OC原版是 [Yalantis](https://github.com/Yalantis) 的 [FoldingTabBar.iOS](https://github.com/Yalantis/FoldingTabBar.iOS)
